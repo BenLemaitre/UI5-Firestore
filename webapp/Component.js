@@ -4,7 +4,6 @@ sap.ui.define([
 	"benlem/zfirebase/model/models",
 	"./Firebase"
 ], function (UIComponent, Device, models, Firebase) {
-	"use strict";
 
 	return UIComponent.extend("benlem.zfirebase.Component", {
 

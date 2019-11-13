@@ -1,23 +1,13 @@
 /* global firebase:true */
 sap.ui.define([
-	"sap/ui/model/json/JSONModel"
-], function (JSONModel) {
-	
-	// Firebase-config retrieved from the Firebase-console
-	const firebaseConfig = {
-		apiKey: "AIzaSyDaeDU5nCQU-PZnuw0XxbDIqxvJEHIHrEU",
-	    authDomain: "quickstart-db279.firebaseapp.com",
-	    databaseURL: "https://quickstart-db279.firebaseio.com",
-	    projectId: "quickstart-db279",
-	    storageBucket: "quickstart-db279.appspot.com",
-	    messagingSenderId: "558160337014",
-	    appId: "1:558160337014:web:8fa0ab50136028c65d2757",
-	    measurementId: "G-MFMZQLW48G"
-	};
+	"sap/ui/model/json/JSONModel",
+	"./FirebaseConfig"
+], function (JSONModel, FirebaseConfig) {
 
 	return {
 		initializeFirebase: function () {
 			// Initialize Firebase with the Firebase-config
+			const firebaseConfig = FirebaseConfig.getFirebaseConfig();
 			firebase.initializeApp(firebaseConfig);
 			
 			// Create a Firestore reference
