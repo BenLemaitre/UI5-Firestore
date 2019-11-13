@@ -1,1 +1,0 @@
-sap.ui.define(["benlem/zfirebase/controller/Main.controller"],function(n){"use strict";QUnit.module("Main Controller");QUnit.test("I should test the Main controller",function(e){var t=new n;t.onInit();e.ok(t)})});
